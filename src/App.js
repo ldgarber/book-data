@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Jumbotron, Container } from 'reactstrap';
+
+
+const LoginWindow = (props) => {
+  return (
+    <Jumbotron>
+      <Container>
+        <h1 className="display-3">Unsplash browser</h1>
+        <p className="lead">This is an example of how to do something amazing</p>
+        <p><a className="btn btn-primary" href={process.env.REACT_APP_BASE_URL + "/auth"}>Connect</a></p>
+      </Container>
+    </Jumbotron>
+  )
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <LoginWindow/>
     );
   }
 }
 
 export default App;
+
