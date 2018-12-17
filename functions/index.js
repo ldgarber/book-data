@@ -27,9 +27,13 @@ webApp.get('/callback', (req, res) => {
   gr.getAccessToken()
     .then(() => {
       console.log('success!')
-      
+      gr.getCurrentUserInfo()
+        .then((response) => {
+          const user_id = response.user.id;  
+          console.log(user_id)
+          res.redirect( oauth.static_site_url + "?user_id=" + user_id ); 
+        }); 
     }); 
-  res.redirect( oauth.static_site_url + "?auth=true" ); 
 }) 
 
 exports.oauth = functions.https.onRequest( webApp )
