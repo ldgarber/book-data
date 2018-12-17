@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container } from 'reactstrap';
-
+import QueryString from 'querystring'; 
+import GoodReads from "./components/Goodreads"; 
 
 const LoginWindow = (props) => {
   return (
@@ -15,10 +16,26 @@ const LoginWindow = (props) => {
 }
 
 class App extends Component {
+  state = { auth: null } 
+
+  componentDidMount() {
+    const values = QueryString.parse(window.location.search.slice(1)) 
+
+    if ( values.auth !== undefined ) {
+      console.log("auth!")
+      this.setState({ auth: true})
+    } else {
+      console.log("no token")
+    } 
+  } 
   render() {
-    return (
-      <LoginWindow/>
-    );
+    if( this.state.auth ) {
+      return <GoodReads auth={true} />
+    } else {
+      return (
+        <LoginWindow/>
+      );
+    } 
   }
 }
 

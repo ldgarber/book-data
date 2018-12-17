@@ -1,32 +1,32 @@
-[debug] [2018-12-17T15:24:47.012Z] ----------------------------------------------------------------------
-[debug] [2018-12-17T15:24:47.015Z] Command:       /usr/local/Cellar/node/11.3.0_1/bin/node /usr/local/bin/firebase serve --only functions
-[debug] [2018-12-17T15:24:47.015Z] CLI Version:   6.1.2
-[debug] [2018-12-17T15:24:47.016Z] Platform:      darwin
-[debug] [2018-12-17T15:24:47.016Z] Node Version:  v11.3.0
-[debug] [2018-12-17T15:24:47.017Z] Time:          Mon Dec 17 2018 10:24:47 GMT-0500 (Eastern Standard Time)
-[debug] [2018-12-17T15:24:47.017Z] ----------------------------------------------------------------------
+[debug] [2018-12-17T16:14:53.989Z] ----------------------------------------------------------------------
+[debug] [2018-12-17T16:14:53.993Z] Command:       /usr/local/Cellar/node/11.3.0_1/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-12-17T16:14:53.993Z] CLI Version:   6.1.2
+[debug] [2018-12-17T16:14:53.993Z] Platform:      darwin
+[debug] [2018-12-17T16:14:53.993Z] Node Version:  v11.3.0
+[debug] [2018-12-17T16:14:53.994Z] Time:          Mon Dec 17 2018 11:14:53 GMT-0500 (Eastern Standard Time)
+[debug] [2018-12-17T16:14:53.994Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-12-17T15:24:47.035Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-12-17T15:24:47.036Z] > authorizing via signed-in user
-[debug] [2018-12-17T15:24:47.036Z] [iam] checking project book-challenge-data for permissions ["firebase.projects.get"]
-[debug] [2018-12-17T15:24:47.038Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-12-17T15:24:47.038Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-12-17T16:14:54.014Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-12-17T16:14:54.014Z] > authorizing via signed-in user
+[debug] [2018-12-17T16:14:54.014Z] [iam] checking project book-challenge-data for permissions ["firebase.projects.get"]
+[debug] [2018-12-17T16:14:54.017Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-12-17T16:14:54.017Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2018-12-17T15:24:47.281Z] <<< HTTP RESPONSE 200
-[debug] [2018-12-17T15:24:47.291Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/book-challenge-data:testIamPermissions  
+[debug] [2018-12-17T16:14:54.208Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-17T16:14:54.220Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/book-challenge-data:testIamPermissions  
 
-[debug] [2018-12-17T15:24:47.522Z] <<< HTTP RESPONSE 200
-[debug] [2018-12-17T15:24:47.524Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/book-challenge-data  
+[debug] [2018-12-17T16:14:54.426Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-17T16:14:54.428Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/book-challenge-data  
  
-[debug] [2018-12-17T15:24:47.742Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-17T16:14:54.643Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/leahgarber/dev/code/book-data'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-12-17T15:24:48.781Z] Fetching environment
-[debug] [2018-12-17T15:24:48.784Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/338095951986:getServerAppConfig  
+[debug] [2018-12-17T16:14:55.716Z] Fetching environment
+[debug] [2018-12-17T16:14:55.718Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/338095951986:getServerAppConfig  
  
-[debug] [2018-12-17T15:24:48.998Z] <<< HTTP RESPONSE 200
-[debug] [2018-12-17T15:24:48.999Z] Starting @google-cloud/functions-emulator
-[debug] [2018-12-17T15:24:50.559Z] Parsing function triggers
+[debug] [2018-12-17T16:14:55.887Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-17T16:14:55.888Z] Starting @google-cloud/functions-emulator
+[debug] [2018-12-17T16:14:57.435Z] Parsing function triggers
 [info] ✔  functions: oauth: http://localhost:5000/book-challenge-data/us-central1/oauth
