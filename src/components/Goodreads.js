@@ -13,7 +13,7 @@ const Loading = () => {
 const Profile = ({user}) => {
   return (
     <Container>
-      <h1>Hello {user.name}!</h1>
+      <h1>Hello {user}!</h1>
     </Container>
   )
 }
@@ -22,15 +22,16 @@ export default class Goodreads extends React.Component {
   state = {loading: true}
 
   componentDidMount() {
-    const {auth} = this.props;
+    const {user_id} = this.props;
+    console.log(user_id)
 
-    this.setState( {loading: false, user: {name: 'test'}})
+    this.setState( {loading: false, user_id: user_id})
   }
   render() {
     if( this.state.loading ) {
       return (<Loading/>)
-    } else if ( this.state.user ) {
-      return (<Profile user={this.state.user}/>)
+    } else if ( this.state.user_id ) {
+      return (<Profile user={this.state.user_id}/>)
     } else {
       return (<p>Horrible error</p>)
     }

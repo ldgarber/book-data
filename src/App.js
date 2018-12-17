@@ -16,21 +16,20 @@ const LoginWindow = (props) => {
 }
 
 class App extends Component {
-  state = { auth: null } 
+  state = { user_id: null } 
 
   componentDidMount() {
     const values = QueryString.parse(window.location.search.slice(1)) 
 
-    if ( values.auth !== undefined ) {
-      console.log("auth!")
-      this.setState({ auth: true})
+    if ( values.user_id !== undefined ) {
+      this.setState({ user_id: values.user_id })
     } else {
       console.log("no token")
     } 
   } 
   render() {
-    if( this.state.auth ) {
-      return <GoodReads auth={true} />
+    if( this.state.user_id ) {
+      return <GoodReads user_id={this.state.user_id} />
     } else {
       return (
         <LoginWindow/>
